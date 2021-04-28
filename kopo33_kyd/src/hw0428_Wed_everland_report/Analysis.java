@@ -1,25 +1,26 @@
 package hw0428_Wed_everland_report;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Analysis {
 	
 	//일자별 분석
 	public static void date_analysis(Value vl) {
-		vl.dateArr2 = new String[vl.dateArr.size()][2];
+		Collections.sort(vl.dateArr);
 		for (int j = 0; j < vl.dateArr.size(); j++) {
 			if (vl.orderList[0][0] != null) {
 				for (int i = 0; i < vl.orderList.length; i++) {
 					if (vl.dateArr.get(j).equals(vl.orderList[i][0])) {
 						vl.dateSales += Integer.parseInt(vl.orderList[i][4]);
-						vl.dateArr2[j][i] = {vl.dateArr.get(j), vl.dateSales};
 					}
 				}
 			}
-			vl.dateArrSales.add(vl.dateSales);
+			vl.dateArrSales.add(Integer.toString(vl.dateSales));
 			vl.dateSales = 0;
 		}
 	}
+	
 	
 	//권종별 분석
 	public static void day_night_sales(Value vl) {

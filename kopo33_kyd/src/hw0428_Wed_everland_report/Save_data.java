@@ -1,16 +1,22 @@
 package hw0428_Wed_everland_report;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Save_data {
 	
 	public static void save(Value vl) throws IOException {
-		vl.br = new BufferedReader(new FileReader(Value.SAVE_ROUTE));
-
+		File file = new File(Value.SAVE_ROUTE);
+		FileInputStream fi = new FileInputStream(file);
+		InputStreamReader ir = new InputStreamReader(fi, "MS949");
+		vl.br = new BufferedReader(ir);
+		
 		String line;
 		if ((line = vl.br.readLine()) == null) {
 			System.out.println("비어 있는 파일입니다.");
@@ -18,7 +24,7 @@ public class Save_data {
 		
 		while ((line = vl.br.readLine()) != null) {
 			String[] lines = line.split(",");
-			saveOrderList(lines[0], lines[1], lines[2], lines[3], lines[4], lines[5],	vl.position, vl.orderList);
+			saveOrderList(lines[0], lines[1], lines[2], lines[3], lines[4], lines[5], vl.position, vl.orderList);
 			vl.dateHash.add(lines[0]);
 			vl.position++;
 			

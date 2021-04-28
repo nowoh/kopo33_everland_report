@@ -80,10 +80,6 @@ public class Print {
 		System.out.println("--------------------------------\n");
 	}
 	
-	
-	
-	
-	
 	//우대권별 출력
 	public static void discount_print(Value vl) {
 		System.out.println("======우대권 판매 현황======");
@@ -96,44 +92,5 @@ public class Print {
 		System.out.println("----------------------------\n");
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

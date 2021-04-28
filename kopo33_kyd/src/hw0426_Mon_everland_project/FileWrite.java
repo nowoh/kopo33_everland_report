@@ -1,30 +1,47 @@
 package hw0426_Mon_everland_project;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class FileWrite {
+	File file = new File(FixedValue.SAVE_ROUTE);
+	private FileWriter fw;
+	private FileOutputStream fo;
+	private OutputStreamWriter ow;
+	private BufferedWriter bw;
+	
+	//헤더 쓰기
+	public void headerWrite() throws IOException {
+		if(file.exists() == false) {
+			fo = new FileOutputStream(file, true);
+			ow = new OutputStreamWriter(fo, "MS949");
+			bw = new BufferedWriter(ow);
+			String head = "날짜," + "권종," + "연령구분," + "수량," + "가격," + "우대사항";
+			bw.write(head);
+			bw.newLine();
+			bw.flush();
+			bw.close();
+		}		
+	}
+	
 	//주문 내역 파일로 출력
-	public void orderFilePrint(int totalPrice, int position, int orderList[][], int filePosition) throws IOException {
+	public void orderFilePrint(int totalPrice, int position, int orderList[][]) throws IOException {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 		Date date = new Date();
 		
 		FileWriter fw = new FileWriter(FixedValue.SAVE_ROUTE, true);
-		BufferedReader fr = new BufferedReader(new FileReader(FixedValue.SAVE_ROUTE));
+
 		
 		for (int i = 0; i < position; i++) {
-			String line;
-			if (filePosition == 0) {	
-				if ((line = fr.readLine()) == null) {
-					String head = "날짜," + "권종," + "연령구분," + "수량," + "가격," + "우대사항";
-					fw.write(head + "\n");
-				}
-			}
-			filePosition++;
+			//filePosition++;
 			
 			fw.write(sdf.format(date) + ",");
 			

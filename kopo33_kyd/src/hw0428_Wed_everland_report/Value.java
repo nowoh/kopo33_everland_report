@@ -5,15 +5,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Value {
-//	private HashSet<String> dateHash;
-//	private ArrayList<String> dateArr;
-//	private ArrayList<Integer> dateArrSales;
-//	
-//	public Value() {
-//		dateHash = new HashSet<String>();
-//		dateArr = new ArrayList<String>(dateHash);
-//		dateArrSales = new ArrayList<Integer>();
-//	}
+
 	//권종별 카운트
 	int day=0, night=0;
 	int dayBaby=0, dayChild=0, dayTeen=0, dayAdult=0, dayOld=0;
@@ -35,13 +27,16 @@ public class Value {
 	
 	//저장 위치
 	static final String SAVE_ROUTE = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\everland_project.csv";
+	static final String SAVE_ROUTE1 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\date_report.csv";
+	static final String SAVE_ROUTE2 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\day_night_report.csv";
+	static final String SAVE_ROUTE3 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\discount_report.csv";
 	
 	//배열
-	HashSet<String> dateHash;// = new HashSet<String>();					//일자 중복 없애기
-	ArrayList<String> dateArr;// = new ArrayList<String>(vl.dateHash);		//hashset arraylist에 넣기
-	ArrayList<Integer> dateArrSales;// = new ArrayList<Integer>();			
+	HashSet<String> dateHash;				//일자 중복 없애기
+	ArrayList<String> dateArr;				//hashset arraylist에 넣기
+	ArrayList<String> dateArrSales;			
 	ArrayList<String[]> datedate;
-	String[][] dateArr2;
+	String[][] result;
 	
 	//읽기
 	public BufferedReader br;
