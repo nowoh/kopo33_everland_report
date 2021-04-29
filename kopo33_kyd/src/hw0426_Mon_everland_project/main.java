@@ -14,7 +14,6 @@ public class main {
 		cv = new ChValue();
 		
 		int position = 0; 	//주문 내역 배열 탐색용
-		//int filePosition = 0;
 		int reportPosition = 0;
 		int[][] orderList = new int[100][5];
 		int isExit = 0;

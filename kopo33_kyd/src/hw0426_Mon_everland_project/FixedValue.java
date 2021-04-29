@@ -34,5 +34,6 @@ public class FixedValue {
 	//파일 저장 경로
 	final static String SAVE_ROUTE = "everland_project.csv";
 	
+	//error 메시지
 	final static String ERROR_MSG = "다시 입력해주시기 바랍니다.";
 }
