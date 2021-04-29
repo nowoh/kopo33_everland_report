@@ -12,10 +12,10 @@ import java.util.HashSet;
 public class Save_data {
 	
 	public static void save(Value vl) throws IOException {
-		File file = new File(Value.SAVE_ROUTE);
-		FileInputStream fi = new FileInputStream(file);
-		InputStreamReader ir = new InputStreamReader(fi, "MS949");
-		vl.br = new BufferedReader(ir);
+//		File file = new File(Value.SAVE_ROUTE);
+//		FileInputStream fi = new FileInputStream(file);
+//		InputStreamReader ir = new InputStreamReader(fi, "MS949");
+		vl.br = new BufferedReader(new FileReader(Value.SAVE_ROUTE));
 		
 		String line;
 		if ((line = vl.br.readLine()) == null) {
