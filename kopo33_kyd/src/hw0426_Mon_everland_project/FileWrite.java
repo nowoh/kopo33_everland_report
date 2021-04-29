@@ -22,7 +22,7 @@ public class FileWrite {
 	public void headerWrite() throws IOException {
 		if(file.exists() == false) {
 			fo = new FileOutputStream(file, true);
-			ow = new OutputStreamWriter(fo, "MS949");
+			ow = new OutputStreamWriter(fo, "MS949");		//인코딩
 			bw = new BufferedWriter(ow);
 			String head = "날짜," + "권종," + "연령구분," + "수량," + "가격," + "우대사항";
 			bw.write(head);
@@ -38,11 +38,8 @@ public class FileWrite {
 		Date date = new Date();
 		
 		FileWriter fw = new FileWriter(FixedValue.SAVE_ROUTE, true);
-
 		
 		for (int i = 0; i < position; i++) {
-			//filePosition++;
-			
 			fw.write(sdf.format(date) + ",");
 			
 			switch(orderList[i][0]) {
@@ -90,9 +87,7 @@ public class FileWrite {
 				default :
 					break;
 			}
-			
 		}
 		fw.close();
-
 	}
 }

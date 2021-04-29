@@ -27,9 +27,9 @@ public class Value {
 	
 	//저장 위치
 	static final String SAVE_ROUTE = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\everland_project.csv";
-	static final String SAVE_ROUTE1 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\date_report.csv";
-	static final String SAVE_ROUTE2 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\day_night_report.csv";
-	static final String SAVE_ROUTE3 = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\discount_report.csv";
+	static final String SAVE_ROUTE1 = "date_report.csv";
+	static final String SAVE_ROUTE2 = "day_night_report.csv";
+	static final String SAVE_ROUTE3 = "discount_report.csv";
 	
 	//배열
 	HashSet<String> dateHash;				//일자 중복 없애기

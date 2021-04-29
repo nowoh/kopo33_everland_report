@@ -11,7 +11,6 @@ public class InputConsole {
 		scan.close();
 	}
 	
-	
 	//권종 입력
 	public int inputTicketSelect(ChValue cv) {
 		cv.ticketSelect = 0;

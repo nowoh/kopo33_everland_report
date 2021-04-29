@@ -13,7 +13,7 @@ public class main {
 		FileWrite fwt = new FileWrite();
 		cv = new ChValue();
 		
-		int position = 0; 	//주문 내역 배열 탐색용
+		int position = 0; 						//주문 내역 배열 탐색용
 		int[][] orderList = new int[100][5];
 		int isExit = 0;
 		int continueSelect = 0;
@@ -39,7 +39,7 @@ public class main {
 				//가격 출력
 				pr.pricePrint(cv.priceResult);
 				
-				//이어서 주문할지 입력
+				//이어서 주문할지 입력 (1. 계속 2. 종료)
 				continueSelect = pr.orderContinue();
 				
 				if (continueSelect == 2) {

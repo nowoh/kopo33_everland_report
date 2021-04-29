@@ -36,13 +36,15 @@ public class main {
 		pr.date_analysis_print(vl);
 		pr.discount_print(vl);
 		
-		//파일 쓰기
+		//분석한 데이터 파일 쓰기
+		
+		//일자별
 		fwt.dateHeader();
 		fwt.dateWrite(vl);
-		
+		//권종별
 		fwt.day_night_Header();
 		fwt.day_night_Write(vl);
-		
+		//우대사항별
 		fwt.discountHeader();
 		fwt.discountWrite(vl);
 

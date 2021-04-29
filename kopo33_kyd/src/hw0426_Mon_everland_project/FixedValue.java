@@ -23,6 +23,7 @@ public class FixedValue {
 	final static long FULL_DIGIT = 10000000000000L, FULL_DIGIT_MIN = 10000000000L,
 			SEVEN_DIGIT = 1000000L;
 
+	//주민등록번호 자르기
 	final static int TWO_DIGIT = 100, ONE_DIGIT = 10,
 			OLD_GENERATION = 1900, NEW_GENERATION = 2000, 
 			MALE_OLD = 1, FEMALE_OLD = 2, MALE_NEW = 3, FEMALE_NEW = 4,

@@ -146,7 +146,6 @@ public class CalPrice {
 		orderList[position][2] = orderCount;
 		orderList[position][3] = priceResult;
 		orderList[position][4] = discountSelect;
-		//position++;
 		
 	}
 	

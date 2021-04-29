@@ -7,7 +7,7 @@ public class Analysis {
 	
 	//일자별 분석
 	public static void date_analysis(Value vl) {
-		Collections.sort(vl.dateArr);
+		Collections.sort(vl.dateArr);					//순서가 뒤죽박죽 들어간 것 sort
 		for (int j = 0; j < vl.dateArr.size(); j++) {
 			if (vl.orderList[0][0] != null) {
 				for (int i = 0; i < vl.orderList.length; i++) {
@@ -20,7 +20,6 @@ public class Analysis {
 			vl.dateSales = 0;
 		}
 	}
-	
 	
 	//권종별 분석
 	public static void day_night_sales(Value vl) {
