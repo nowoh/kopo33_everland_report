@@ -26,7 +26,7 @@ public class Value {
 	int position=0;
 	
 	//저장 위치
-	static final String SAVE_ROUTE = "C:\\Users\\Howon\\eclipse-workspace\\kopo33_kyd\\everland_project.csv";
+	static final String SAVE_ROUTE = "everland_project.csv";
 	static final String SAVE_ROUTE1 = "date_report.csv";
 	static final String SAVE_ROUTE2 = "day_night_report.csv";
 	static final String SAVE_ROUTE3 = "discount_report.csv";
