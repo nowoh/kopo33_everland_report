@@ -7,14 +7,13 @@ public class main {
 	static ChValue cv;
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner(System.in);
-		InputConsole IC = new InputConsole();
+		InputConsole IC = new InputConsole();		
 		CalPrice CP = new CalPrice();
 		Print pr = new Print();
 		FileWrite fwt = new FileWrite();
 		cv = new ChValue();
 		
 		int position = 0; 	//주문 내역 배열 탐색용
-		int reportPosition = 0;
 		int[][] orderList = new int[100][5];
 		int isExit = 0;
 		int continueSelect = 0;
@@ -22,6 +21,7 @@ public class main {
 		
 		do {
 			while(true) {
+				//티켓 주문 입력
 				IC.inputData(IC.inputTicketSelect(cv), IC.inputCustomerIDNumber(cv), 
 						IC.inputOrderCount(cv), IC.inputDiscount(cv));
 				
